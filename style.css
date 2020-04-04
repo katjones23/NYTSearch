@@ -10,14 +10,11 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.searchForm {
-    /* margin-bottom: 25px; */
-    /* padding-bottom: 25px; */
+.extraBtnStyle {
+    border: 0;
+    color: black;
 }
 
-footer {
-    background: white;
-    color: black;
-    position: fixed;
-    bottom: 0;
+.extraBtnStyle:hover {
+    background-color: lightgrey;
 }
