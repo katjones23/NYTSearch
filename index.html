@@ -10,23 +10,24 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <!-- my css -->
     <link rel="stylesheet" href="./style.css">
-    </link>
 </head>
 
 <body>
     <div class="container">
         <div class="jumbotron justify-content-center">
-            <h1 class="display-4">New York Times Search</h1>
+            <h1 class="display-4"><i class="far fa-newspaper"></i> New York Times Search</h1>
             <hr class="my-4">
         </div>
     </div>
 
     <div class="container">
         <div class="card searchForm">
-            <div class="card-header">
-                Search Parameters
-            </div>
+            <div class="card-header"><i class="fas fa-table"></i> Search Parameters</div>
             <div class="card-body">
                 <form>
                     <div class="form-group">
@@ -36,46 +37,25 @@
                     <div class="form-group">
                         <label for="number-records">Number of Records to Retrieve:</label>
                         <select class="custom-select mr-sm-2" id="number-records">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
-                            <option>10</option>
-                            <option>11</option>
-                            <option>12</option>
-                            <option>13</option>
-                            <option>14</option>
-                            <option>15</option>
-                            <option>16</option>
-                            <option>17</option>
-                            <option>18</option>
-                            <option>19</option>
-                            <option>20</option>
-                            <option>21</option>
-                            <option>22</option>
-                            <option>23</option>
-                            <option>24</option>
-                            <option>25</option>
+                            <option value="1">1</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="start-year">Start Year (Optional):</label>
-                        <input class="form-control" type="text" id="start-year">
+                        <input class="form-control" type="number" id="start-year">
                     </div>
                     <div class="form-group">
                         <label for="end-year">End Year (Optional):</label>
-                        <input class="form-control" type="text" id="end-year">
+                        <input class="form-control" type="number" id="end-year">
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <button type="submit" id="search"
-                                class="btn btn-outline-primary extraBtnStyle">Search</button>
-                            <button type="submit" id="clear" class="btn btn-outline-primary extraBtnStyle">Clear
+                            <button type="submit" id="search" class="btn btn-outline-primary extraBtnStyle"><i
+                                    class="fas fa-search"></i> Search</button>
+                            <button type="submit" id="clear" class="btn btn-outline-primary extraBtnStyle"><i
+                                    class="fas fa-trash"></i> Clear
                                 Results</button>
                         </div>
                     </div>
@@ -88,19 +68,17 @@
 
     <div class="container">
         <div class="card topArticles">
-            <div class="card-header">
-                Top Articles
-            </div>
+            <div class="card-header"><i class="fas fa-star"></i> Top Articles</div>
             <div class="card-body topArticlesResults">
             </div>
         </div>
     </div>
 
-    <footer id="sticky-footer" class="fixed-bottom py-4 bg-light text-black-50">
-        <div class="container text-center">
-            <small>Kat, Steve, and Tim</small>
-        </div>
-    </footer>
+    <div class="container">
+            <div class="footer">
+                <small class="footerText">Kat, Steve, and Tim <i class="fas fa-code"></i></small>
+            </div>
+    </div>
 
 
     <!-- Optional JavaScript -->
@@ -115,14 +93,14 @@
         crossorigin="anonymous"></script>
     <script src="./script.js"></script>
     <script>
-        $("#search").on("click", function(event) {
+        $("#search").on("click", function (event) {
             event.stopPropagation();
             event.preventDefault();
 
             runQuery();
         });
 
-        $("#clear").on("click", function(event) {
+        $("#clear").on("click", function (event) {
             event.stopPropagation();
             event.preventDefault();
 

@@ -1,7 +1,3 @@
-body {
-    padding-bottom: 120px;
-}
-
 .jumbotron {
     background-color: #02064a;
     color: #eeeeee;
@@ -17,4 +13,16 @@ body {
 
 .extraBtnStyle:hover {
     background-color: lightgrey;
+}
+
+.footer {
+    bottom: 0;
+    border-top: 2px solid lightgray;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footerText {
+    margin-top: 20px;
 }
